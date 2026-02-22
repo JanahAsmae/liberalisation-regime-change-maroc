@@ -74,7 +74,7 @@ Les données proviennent de sources officielles :
 ---
 
 ## 🗂 Structure du projet
-text```
+```
 project_root/
 │
 ├── data/
