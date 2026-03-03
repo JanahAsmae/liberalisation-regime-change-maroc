@@ -93,7 +93,7 @@ project_root/
 │   │   ├── pays3/
 │   │   └── ...
 │   │
-│   ├── interim/              # Données nettoyées mais non finales
+│   ├── interim/              # Données structurées mais non finales
 │   │   ├── maroc/
 │   │   ├── pays2/
 │   │   └── ...
