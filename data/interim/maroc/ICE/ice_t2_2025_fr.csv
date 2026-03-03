@@ -1,5 +1,5 @@
 ﻿division,ice,annee,trimestre,type
-"1- Alimentation, boissons et tabacs",94.9,2025,t2,export
+1- Alimentation boissons et tabacs,94.9,2025,t2,export
 2- Energie et lubrifiants,85.9,2025,t2,export
 3- Produits bruts d’origine animale et végétale,151.3,2025,t2,export
 4- Produits bruts d’origine minérale,116.4,2025,t2,export
@@ -7,7 +7,8 @@
 6- Produits finis d’équipement agricole,77.9,2025,t2,export
 7- Produits finis d’équipement industriel,118.7,2025,t2,export
 8- Produits finis de consommation,111.1,2025,t2,export
-"1- Alimentation, boissons et tabacs",127.1,2025,t2,import
+EXPORTATIONS,117.1,2025,t2,export
+1- Alimentation boissons et tabacs,127.1,2025,t2,import
 2- Energie et lubrifiants,84.0,2025,t2,import
 3- Produits bruts d’origine animale et végétale,107.5,2025,t2,import
 4- Produits bruts d’origine minérale,98.6,2025,t2,import
@@ -15,3 +16,4 @@
 6- Produits finis d’équipement agricole,98.7,2025,t2,import
 7- Produits finis d’équipement industriel,92.1,2025,t2,import
 8- Produits finis de consommation,113.3,2025,t2,import
+IMPORTATIONS,104.8,2025,t2,import
