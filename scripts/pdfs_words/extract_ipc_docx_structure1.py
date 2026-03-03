@@ -49,7 +49,7 @@ def parse_float(val):
 def extract_current_month_from_table(table):
     """
     Extrait les données du tableau en prenant la colonne du mois courant (indice 2).
-    Hypothèse : la ligne d'en-tête est la deuxième (index 1), les données commencent à l'index 2.
+    La ligne d'en-tête est la deuxième (index 1), les données commencent à l'index 2.
     """
     data = []
     for row in table.rows:

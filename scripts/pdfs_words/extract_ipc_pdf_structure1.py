@@ -35,17 +35,17 @@ def traiter_pdf(chemin_pdf):
     """
     annee, mois = extraire_annee_mois(chemin_pdf.name)
     if not annee or not mois:
-        print(f"⚠️  Impossible d'extraire année/mois de {chemin_pdf.name} – ignoré.")
+        print(f"  Impossible d'extraire année/mois de {chemin_pdf.name} – ignoré.")
         return None
 
     with pdfplumber.open(chemin_pdf) as pdf:
         if len(pdf.pages) < 2:
-            print(f"⚠️  {chemin_pdf.name} : moins de 2 pages, ignoré.")
+            print(f"  {chemin_pdf.name} : moins de 2 pages, ignoré.")
             return None
         page = pdf.pages[1]
         tables = page.extract_tables()
         if not tables:
-            print(f"⚠️  {chemin_pdf.name} : aucun tableau trouvé page 2.")
+            print(f"  {chemin_pdf.name} : aucun tableau trouvé page 2.")
             return None
 
         # Parcourir tous les tableaux pour trouver celui contenant "Produits alimentaires"
@@ -90,12 +90,12 @@ def traiter_pdf(chemin_pdf):
             if resultats:
                 return resultats
 
-        print(f"⚠️  {chemin_pdf.name} : aucune table avec 'Produits alimentaires' trouvée.")
+        print(f"  {chemin_pdf.name} : aucune table avec 'Produits alimentaires' trouvée.")
         return None
 
 def main():
     fichiers_pdf = sorted(Path(INPUT_DIR).glob("*.pdf"))
-    print(f"🔍 {len(fichiers_pdf)} fichiers PDF trouvés dans {INPUT_DIR}\n")
+    print(f" {len(fichiers_pdf)} fichiers PDF trouvés dans {INPUT_DIR}\n")
     for chemin in fichiers_pdf:
         print(f"Traitement de {chemin.name}...")
         resultats = traiter_pdf(chemin)
@@ -110,7 +110,7 @@ def main():
             print(f"   → {len(resultats)} lignes extraites et sauvegardées dans {chemin_csv}")
         else:
             print(f"   → 0 lignes extraites.")
-    print(f"\n✅ Traitement terminé. Les fichiers CSV sont dans le dossier '{INTERIM_DIR}'.")
+    print(f"\n Traitement terminé. Les fichiers CSV sont dans le dossier '{INTERIM_DIR}'.")
 
 if __name__ == "__main__":
     main()

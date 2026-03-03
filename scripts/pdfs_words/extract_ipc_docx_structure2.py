@@ -48,7 +48,7 @@ def parse_float(val):
 def extract_from_docx_table(table):
     """
     Extrait les données d'un tableau DOCX.
-    Hypothèse : la deuxième ligne contient les en-têtes des mois,
+    La deuxième ligne contient les en-têtes des mois,
     les lignes suivantes contiennent les données.
     Sélectionne la colonne du mois le plus récent (mois courant).
     """

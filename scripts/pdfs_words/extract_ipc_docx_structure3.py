@@ -5,7 +5,6 @@ Extraction des données IPC depuis les fichiers DOCX (janvier de chaque année).
 - Colonne 2 : valeur du mois courant (janvier).
 - L'année est extraite du nom du fichier (ex: ipc_2013_01.docx → 2013).
 - Mois = 'janvier' (constant pour ces fichiers).
-- Sauvegarde : data/processed/ipc_2013_01.csv, etc.
 """
 
 import os
@@ -56,7 +55,7 @@ def extraire_tableau_divisions(doc):
     return None
 
 def main():
-    input_dir = "data/raw/maroc/inflation/IPC/docx/structure3"  # à adapter
+    input_dir = "data/raw/maroc/inflation/IPC/docx/structure3"
     output_dir = "data/interim/maroc/inflation"
     os.makedirs(output_dir, exist_ok=True)
 
@@ -76,8 +75,8 @@ def main():
             print("  Aucun tableau trouvé")
             continue
 
-        # On suppose que la ligne d'en-tête est la ligne 1 (index 1)
-        # et que la colonne du mois courant est l'index 2 (0-based)
+        # la ligne d'en-tête est la ligne 1 (index 1)
+        # et la colonne du mois courant est l'index 2 (0-based)
         if len(data_table) < 3:
             print("  Tableau trop petit")
             continue

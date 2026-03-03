@@ -3,9 +3,7 @@ Extraction des données IPC (Indice des Prix à la Consommation)
 depuis les fichiers PDF du HCP Maroc.
 
 Structure de sortie : Division par produits | IPC | Annee | Mois (nom en français)
-Pour chaque fichier PDF, un CSV est généré individuellement dans data/processed.
 Seul le mois actuel (mois courant) est conservé.
-Pas d'export Excel consolidé.
 """
 
 import pdfplumber

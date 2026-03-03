@@ -38,17 +38,17 @@ def traiter_pdf(chemin_pdf):
     """
     annee, mois = extraire_annee_mois(chemin_pdf.name)
     if not annee or not mois:
-        print(f"⚠️  Impossible d'extraire année/mois de {chemin_pdf.name} – ignoré.")
+        print(f"  Impossible d'extraire année/mois de {chemin_pdf.name} – ignoré.")
         return []
 
     with pdfplumber.open(chemin_pdf) as pdf:
         if len(pdf.pages) < 2:
-            print(f"⚠️  {chemin_pdf.name} : moins de 2 pages, ignoré.")
+            print(f"  {chemin_pdf.name} : moins de 2 pages, ignoré.")
             return []
         page = pdf.pages[1]
         tables = page.extract_tables()
         if not tables:
-            print(f"⚠️  {chemin_pdf.name} : aucun tableau trouvé page 2.")
+            print(f"  {chemin_pdf.name} : aucun tableau trouvé page 2.")
             return []
         raw_table = tables[0]
 
