@@ -128,12 +128,3 @@ Organisation par pays puis par catégorie :
 4. Construction d’un dataset panel  
 5. Modélisation économétrique (à venir)  
 
----
-
-## 📈 État d’avancement
-
-- [x] Collecte des données Maroc  
-- [x] Structuration des dossiers  
-- [ ] Nettoyage et transformation  
-- [ ] Analyse exploratoire  
-- [ ] Modélisation  
